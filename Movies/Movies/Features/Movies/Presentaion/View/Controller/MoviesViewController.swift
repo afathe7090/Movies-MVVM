@@ -9,7 +9,7 @@ import UIKit
 import Combine
 class MoviesViewController: UIViewController, NibBased {
     // MARK: - Properties
-    private var coordinator: MoviesCoordinatorPresentable?
+    private weak var coordinator: MoviesCoordinatorPresentable?
     private let viewModel: MoviesViewModelProtocol
     private var adapter: MovieSectionDatasource?
     private var anyCancellable = Set<AnyCancellable>()
