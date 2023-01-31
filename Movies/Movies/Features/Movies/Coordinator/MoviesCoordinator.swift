@@ -6,6 +6,7 @@
 //
 
 import Coordinator
+import UIKit
 protocol MoviesCoordinatorPresentable: AnyObject {
     func movieDetail(_ movie: MovieModelData)
 }
@@ -23,6 +24,6 @@ final class MoviesCoordinator: Coordinator {
 extension MoviesCoordinator: MoviesCoordinatorPresentable {
     func movieDetail(_ movie: MovieModelData) {
         // Navigate with data that pass to another Builder 🔥
-        print(movie)
+        print("Navigate with data that pass to another Builder 🔥 ,\(movie)")
     }
 }

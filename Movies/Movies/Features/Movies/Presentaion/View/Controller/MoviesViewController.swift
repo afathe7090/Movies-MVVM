@@ -17,7 +17,7 @@ class MoviesViewController: UIViewController, NibBased {
     @IBOutlet weak var movieTableView: UITableView!
     
     // MARK: - Init
-    required init(viewModel: MoviesViewModelProtocol, coordinator: MoviesCoordinatorPresentable) {
+    required init(viewModel: MoviesViewModelProtocol, coordinator: MoviesCoordinatorPresentable?) {
         self.viewModel = viewModel
         self.coordinator = coordinator
         super.init(nibName: MoviesViewController.nibName, bundle: nil)
