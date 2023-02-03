@@ -14,6 +14,9 @@
 		742F8F17297C172700C1A0DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 742F8F16297C172700C1A0DF /* Assets.xcassets */; };
 		742F8F1A297C172700C1A0DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 742F8F18297C172700C1A0DF /* LaunchScreen.storyboard */; };
 		742F8F69297C2A5600C1A0DF /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742F8F68297C2A5600C1A0DF /* MoviesViewModel.swift */; };
+		74519B83298DD3AB00180FEE /* MoviesRemoteRepoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74519B82298DD3AB00180FEE /* MoviesRemoteRepoTests.swift */; };
+		74519B85298DD3F400180FEE /* MoviesRemoteRepoSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74519B84298DD3F400180FEE /* MoviesRemoteRepoSpy.swift */; };
+		74519B87298DD5C900180FEE /* MoviesRepoImpleSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74519B86298DD5C900180FEE /* MoviesRepoImpleSpy.swift */; };
 		74F16A84297C2BAD002D2CF8 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F16A82297C2BAD002D2CF8 /* MoviesViewController.swift */; };
 		74F16A85297C2BAD002D2CF8 /* MoviesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74F16A83297C2BAD002D2CF8 /* MoviesViewController.xib */; };
 		74F16AAF297C2CCA002D2CF8 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F16AAE297C2CCA002D2CF8 /* AppCoordinator.swift */; };
@@ -77,6 +80,9 @@
 		742F8F19297C172700C1A0DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		742F8F1B297C172700C1A0DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		742F8F68297C2A5600C1A0DF /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
+		74519B82298DD3AB00180FEE /* MoviesRemoteRepoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRemoteRepoTests.swift; sourceTree = "<group>"; };
+		74519B84298DD3F400180FEE /* MoviesRemoteRepoSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRemoteRepoSpy.swift; sourceTree = "<group>"; };
+		74519B86298DD5C900180FEE /* MoviesRepoImpleSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRepoImpleSpy.swift; sourceTree = "<group>"; };
 		74F16A81297C2A6D002D2CF8 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F16A82297C2BAD002D2CF8 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
 		74F16A83297C2BAD002D2CF8 /* MoviesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesViewController.xib; sourceTree = "<group>"; };
@@ -127,7 +133,9 @@
 		740EE30529852A1C00CA8264 /* MoviesTests */ = {
 			isa = PBXGroup;
 			children = (
+				74519B81298DD39000180FEE /* Helper */,
 				740EE30629852A1C00CA8264 /* MoviesTests.swift */,
+				74519B82298DD3AB00180FEE /* MoviesRemoteRepoTests.swift */,
 				740EE30D29852A3800CA8264 /* MoviesViewControllerTests.swift */,
 			);
 			path = MoviesTests;
@@ -284,6 +292,15 @@
 				74F16AE3297CAF7D002D2CF8 /* MovieSectionViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		74519B81298DD39000180FEE /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				74519B84298DD3F400180FEE /* MoviesRemoteRepoSpy.swift */,
+				74519B86298DD5C900180FEE /* MoviesRepoImpleSpy.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		74F16AB0297C2CE5002D2CF8 /* Frameworks */ = {
@@ -512,7 +529,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				740EE30729852A1C00CA8264 /* MoviesTests.swift in Sources */,
+				74519B85298DD3F400180FEE /* MoviesRemoteRepoSpy.swift in Sources */,
 				740EE30E29852A3800CA8264 /* MoviesViewControllerTests.swift in Sources */,
+				74519B83298DD3AB00180FEE /* MoviesRemoteRepoTests.swift in Sources */,
+				74519B87298DD5C900180FEE /* MoviesRepoImpleSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
