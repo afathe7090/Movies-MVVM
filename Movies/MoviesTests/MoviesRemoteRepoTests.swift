@@ -21,6 +21,7 @@ final class MoviesRemoteRepoTests: XCTestCase {
         super.setUp()
         self.sut = MoviesRemoteRepoSpy()
         self.anyCancellable = Set<AnyCancellable>()
+        callMoviesResult()
     }
     
     override func tearDown() {
@@ -31,7 +32,7 @@ final class MoviesRemoteRepoTests: XCTestCase {
         self.finished = nil
     }
     
-    func test_moviesRepoRemote_notHaveError() {
+    private func callMoviesResult() {
         sut.getMovies(page: 1)
             .sink { completion in
                 switch completion {
@@ -40,10 +41,30 @@ final class MoviesRemoteRepoTests: XCTestCase {
             } receiveValue: { [weak self] movies in
                 self?.moviesModel = movies
             }.store(in: &anyCancellable)
-        // test data not nil
+    }
+    
+    func test_moviesRemoteRepository_dataMoviesNotNUll() {
         XCTAssertNotNil(moviesModel)
-        // test data counter
+    }
+    
+    func test_moviesRemoteRepository_dataMoviesPageCounter() {
         XCTAssertEqual(moviesModel?.page, 1)
+    }
+    
+    func test_moviesRemoteRepository_dataMoviesErrorIsNull() {
+        XCTAssertNil(error)
+    }
+    
+    func test_moviesRemoteRepository_dataMoviesNotEmptyArray() {
+        XCTAssertNotEqual(moviesModel?.results?.isEmpty, true)
+    }
+    
+    func test_moviesRemoteRepository_totalPageCounterNotNull() {
+        XCTAssertNotNil(moviesModel?.totalPages)
+    }
+    
+    func test_moviesRemoteRepository_totalPageCount() {
+        XCTAssertEqual(moviesModel?.totalPages, 10)
     }
     
 }
