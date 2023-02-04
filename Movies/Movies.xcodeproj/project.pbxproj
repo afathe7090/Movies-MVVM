@@ -133,7 +133,7 @@
 		740EE30529852A1C00CA8264 /* MoviesTests */ = {
 			isa = PBXGroup;
 			children = (
-				74519B81298DD39000180FEE /* Helper */,
+				74519B81298DD39000180FEE /* RemoteSpy */,
 				740EE30629852A1C00CA8264 /* MoviesTests.swift */,
 				74519B82298DD3AB00180FEE /* MoviesRemoteRepoTests.swift */,
 				740EE30D29852A3800CA8264 /* MoviesViewControllerTests.swift */,
@@ -294,13 +294,13 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		74519B81298DD39000180FEE /* Helper */ = {
+		74519B81298DD39000180FEE /* RemoteSpy */ = {
 			isa = PBXGroup;
 			children = (
 				74519B84298DD3F400180FEE /* MoviesRemoteRepoSpy.swift */,
 				74519B86298DD5C900180FEE /* MoviesRepoImpleSpy.swift */,
 			);
-			path = Helper;
+			path = RemoteSpy;
 			sourceTree = "<group>";
 		};
 		74F16AB0297C2CE5002D2CF8 /* Frameworks */ = {
